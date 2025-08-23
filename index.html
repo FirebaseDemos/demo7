@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда спецтехники</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="logo__icon">С</div>
+                <div class="logo__text">
+                    <h1 class="d-none d-md-block">СПЕЦТЕХ</h1>
+                    <h1 class="d-md-none">СПЕЦТЕХ</h1>
+                    <span class="d-none d-sm-block">Аренда спецтехники</span>
+                </div>
+            </div>
+            <nav class="header__nav d-none d-lg-block">
+                <ul class="nav__list">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#equipment">Техника</a></li>
+                    <li><a href="#rent">Арендовать</a></li>
+                </ul>
+            </nav>
+            <div class="header__contact">
+                <button class="btn btn--call" onclick="scrollToForm()">Заказать звонок</button>
+            </div>
+            <!-- Мобильное меню -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+        </div>
+        <!-- Мобильное меню -->
+        <div class="collapse d-lg-none" id="mobileMenu">
+            <div class="container">
+                <ul class="nav__list nav__list--mobile">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#equipment">Техника</a></li>
+                    <li><a href="#rent">Арендовать</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h2 class="hero__title">Аренда спецтехники</h2>
+                <p class="hero__subtitle">Доставка эвакуатором на ваш объект в самые быстрые сроки!</p>
+                <button class="btn btn--cta" onclick="scrollToForm()">Оставить заявку</button>
+            </div>
+            <div class="hero__equipment">
+                <div class="equipment__item equipment__item--excavator">
+                    <img src="https://lh3.googleusercontent.com/jhvcjcOIBm5PervzjbgEemHXR_o8y9ALJg7Mcem6aCc-8Je82su4MXaY1ycqbDZa5-y59MPFFClvnAvDCdP2B3kDQzFqCDAxGdmo08fJnPna0C88zg-8zvf93kZYP-OPezMfWi4O" alt="Экскаватор">
+                </div>
+                <div class="equipment__item equipment__item--loader">
+                    <img src="https://i.pinimg.com/474x/a4/df/23/a4df238f0902bac509f7874187881a82.jpg" alt="Погрузчик">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog" id="equipment">
+        <div class="catalog__container container">
+            <h2 class="catalog__title">Каталог спецтехники</h2>
+            <div class="catalog__grid">
+                <div class="catalog__item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                            <div class="item__image">
+                                <img src="https://s1.auto.drom.ru/photo/0Y12o4MhtApSiEddNT-7wBi3jt0w_fIMRAQpF4p_VepeL7C2IAFeUFAVigsPIjWUemx1aF-AoPj8mazEUzhuONktu2yYKw.jpg" alt="Экскаватор погрузчик" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item__content">
+                                <h3>Экскаватор погрузчик</h3>
+                                <div class="item__model">Shanmon 388</div>
+                                <div class="item__specs">
+                                    <span>Ковш: 60см; 40см</span>
+                                </div>
+                                <div class="item__applications">
+                                    <strong>Применение:</strong> разработка траншей: газ, вода, канализация, кабель; копка фундаментов; корчевание пней; Уборка снега
+                                </div>
+                                <div class="item__transport">
+                                    <strong>Транспортировка:</strong> своим ходом или траллом
+                                </div>
+                                <div class="item__buttons">
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 order-lg-2 order-md-1 mb-4 mb-lg-0">
+                            <div class="item__image">
+                                <img src="https://www.vtb-leasing.ru/upload/iblock/b87/thwmbscgo10yeu1l8p93ded4rmac00z2.webp" alt="Гусеничный экскаватор" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 order-lg-1 order-md-2">
+                            <div class="item__content">
+                                <h3>Гусеничный экскаватор</h3>
+                                <div class="item__model">LGCE E6150F</div>
+                                <div class="item__specs">
+                                    <span>Глубина копания: 5.5м</span>
+                                    <span>Объем ковша: 0,6 м³</span>
+                                </div>
+                                <div class="item__applications">
+                                    <strong>Применение:</strong> Разработка траншей, котлованов; планировка территории, корчевание
+                                </div>
+                                <div class="item__transport">
+                                    <strong>Транспортировка:</strong> траллом
+                                </div>
+                                <div class="item__buttons">
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                            <div class="item__image">
+                                <img src="https://autobau.ru/sites/default/files/imagecache/copypast/dx210wa-3.jpg" alt="Экскаватор Rippa" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item__content">
+                                <h3>Экскаватор Rippa</h3>
+                                <div class="item__model">R360 (масса 18 т)</div>
+                                <div class="item__specs">
+                                    <span>Ковш: 60см; 30см; клык;</span>
+                                    <span>Планировочный ковш: 1,2 м;</span>
+                                </div>
+                                <div class="item__transport">
+                                    <strong>Доставка:</strong> тралом; эвакуатором
+                                </div>
+                                <div class="item__buttons">
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 order-lg-2 order-md-1 mb-4 mb-lg-0">
+                            <div class="item__image">
+                                <img src="https://s.alicdn.com/@sc04/kf/Hf80063d025a7409caa97869e9c6c4b51L.jpg_720x720q50.jpg" alt="Экскаватор Rippa R350" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 order-lg-1 order-md-2">
+                            <div class="item__content">
+                                <h3>Экскаватор Rippa R350</h3>
+                                <div class="item__model">(масса 3.5т)</div>
+                                <div class="item__specs">
+                                    <span>Ковш: 40см; 30см; клык</span>
+                                    <span>Планировочный ковш: 1,0м; гидромолот</span>
+                                </div>
+                                <div class="item__transport">
+                                    <strong>Доставка:</strong> эвакуатором
+                                </div>
+                                <div class="item__buttons">
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                            <div class="item__image">
+                                <img src="https://zavodgnb.ru/storage/photo/resized/xy_1350x890/c/v8l8hpkl22wvkqp_d685748.jpg" alt="Прокольная установка УПКТ-30В" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item__content">
+                                <h3>Прокольная установка УПКТ-30В</h3>
+                                <div class="item__description">
+                                    Оказываем услуги по бестраншейной прокладки коммуникаций (методом ГНБ установка УПТК 30ВУ) Осуществляем прокол до 80м (от 63 мм. до 315 м) Работаем по Казахстану.
+                                </div>
+                                <div class="item__buttons">
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about__container container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                    <div class="about__content">
+                        <h2 class="about__title">Мы работаем на территории <span class="highlight">Казахстана</span></h2>
+                        <div class="about__text">
+                            <p>Мы предлагаем комплексные услуги по аренде спецтехники, охватывающие все районы Казахстана. Мы ценим время наших клиентов и гарантируем высокую скорость и удобство на каждом этапе сотрудничества. Наша команда профессионалов готова оперативно решать задачи, связанные с подбором техники, подписанием договора и организацией доставки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="about__steps">
+                        <div class="step">
+                            <div class="step__number">1</div>
+                            <h3>Вы оставляете заявку на аренду техники</h3>
+                            <p>Заполните простую анкету на сайте или свяжитесь по номеру указанному в контактах.</p>
+                            <button class="btn btn--step" onclick="scrollToForm()">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about__container container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                    <div class="about__content">
+                        <div class="about__text">
+                            <p>Надежность и прозрачность - ключевые составляющие качественного сервиса. Каждый этап нашей работы, от подачи заявки до завершения проекта, ориентирован на удобство клиента и эффективное выполнение задач. Вы можете не беспокоиться о технических и логистических вопросах - мы берем на себя полную ответственность за своевременную доставку и бесперебойную работу техники.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="about__steps">
+                        <div class="step">
+                            <div class="step__number">2</div>
+                            <h3>Выбираем дату и заключаем договор</h3>
+                            <p>Не теряем времени, если техника свободна, выбираем дату и оформляем все документы. Бронируем технику за вами на весь срок работ по договору.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about__container container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+                    <div class="about__content">
+                        <div class="about__text">
+                            <p>Процесс сотрудничества разработан максимально просто и понятно для клиента. Мы оперативно реагируем на запросы, предлагаем гибкие условия аренды и обеспечиваем своевременное выполнение проектов с минимальными усилиями с вашей стороны.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="about__steps">
+                        <div class="step">
+                            <div class="step__number">3</div>
+                            <h3>Привозим технику к вам на объект своими силами</h3>
+                            <p>В указанную дату и время техника доставляется к вам и начинает работы в соответствии с техническим заданием вашего объекта.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats__container container">
+            <h2 class="stats__title">О нас в цифрах:</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="stat">
+                        <div class="stat__number">15</div>
+                        <div class="stat__label">Лет опыта в стройке и аренде техники</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="stat">
+                        <div class="stat__number">>500</div>
+                        <div class="stat__label">Успешно сданных объектов</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="stat">
+                        <div class="stat__number">>250</div>
+                        <div class="stat__label">Довольных клиентов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-form" id="rent">
+        <div class="form__container container">
+            <h2 class="form__title">Оставить заявку на аренду</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="form__field">
+                        <label>Техника</label>
+                        <select class="form-select">
+                            <option>Выберете технику</option>
+                            <option>Экскаватор погрузчик Shanmon 388</option>
+                            <option>Гусеничный экскаватор LGCE E6150F</option>
+                            <option>Экскаватор Rippa R360</option>
+                            <option>Экскаватор Rippa R350</option>
+                            <option>Прокольная установка УПКТ-30В</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="form__field">
+                        <label>Дата начала работ</label>
+                        <input type="text" class="form-control" value="12.12.2024">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="form__field">
+                        <label>Номер телефона</label>
+                        <div class="phone__input">
+                            <span class="flag">🇰🇿</span>
+                            <input type="tel" class="form-control" value="+7 (777) 777-77-77">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <button class="btn btn--book w-100" onclick="submitForm()">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__logo">
+                <div class="header__logo">
+                    <div class="logo__icon">С</div>
+                    <div class="logo__text">
+                        <h1 class="d-none d-md-block">СПЕЦТЕХ</h1>
+                        <h1 class="d-md-none">СПЕЦТЕХ</h1>
+                        <span class="d-none d-sm-block">Аренда спецтехники</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="footer__title">Контактная информация:</h2>
+            
+            <div class="footer__contacts">
+                <div class="footer__contact-item">
+                    <span class="contact__label">Телефон:</span>
+                    <span class="contact__value">+7 777 888-37-73</span>
+                </div>
+                <div class="footer__contact-item">
+                    <span class="contact__label">E-mail:</span>
+                    <span class="contact__value">info.seti@mail.ru</span>
+                </div>
+                <div class="footer__contact-item">
+                    <span class="contact__label">Адрес:</span>
+                    <span class="contact__value">г. Астана, ул. Республики д.15</span>
+                </div>
+                <div class="footer__contact-item">
+                    <span class="contact__value">Business Center (7 этаж, офис 717)</span>
+                </div>
+            </div>
+            
+            <div class="footer__separator"></div>
+            
+            <div class="footer__privacy">
+                <a href="#" class="privacy__link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
