@@ -61,7 +61,15 @@ body {
     color: #AAAAAA;
     font-weight: 400;
 }
-
+#allrecords a,
+#island a,
+#island a:link,
+#island a:visited,
+#island a:hover,
+#island a:active {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
 .header__nav {
     position: absolute;
     left: 50%;
@@ -194,6 +202,15 @@ body {
     align-items: flex-end;
 }
 
+/* Десктоп версия - обычное отображение */
+.equipment__desktop {
+    display: flex;
+}
+
+.equipment__mobile {
+    display: none;
+}
+
 .equipment__item {
     width: 350px;
     height: 250px;
@@ -220,6 +237,65 @@ body {
 
 .equipment__item--loader {
     transform: translateX(30px);
+}
+
+/* Мобильная версия - карусель */
+.equipment__carousel {
+    position: relative;
+    width: 350px;
+    height: 250px;
+}
+
+.equipment__carousel .equipment__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.equipment__carousel .equipment__item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.equipment__carousel .equipment__item--excavator.active {
+    transform: translateX(0);
+}
+
+.equipment__carousel .equipment__item--loader.active {
+    transform: translateX(0);
+}
+
+/* Навигация карусели */
+.carousel__navigation {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel__dot:hover {
+    background-color: rgba(249, 168, 37, 0.6);
+    transform: scale(1.2);
+}
+
+.carousel__dot.active {
+    background-color: #F9A825;
+    transform: scale(1.2);
 }
 
 /* Адаптивность - только медиа-запросы */
@@ -307,14 +383,38 @@ body {
         width: 100%;
     }
     
-    .equipment__item {
+    /* Переключаем отображение на мобильных */
+    .equipment__desktop {
+        display: none;
+    }
+    
+    .equipment__mobile {
+        display: block;
+    }
+    
+    .equipment__carousel {
         width: 280px;
         height: 180px;
     }
     
-    .equipment__item--excavator,
-    .equipment__item--loader {
+    .equipment__carousel .equipment__item {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .equipment__carousel .equipment__item--excavator.active,
+    .equipment__carousel .equipment__item--loader.active {
         transform: none;
+    }
+    
+    /* Карусель на мобильных */
+    .carousel__navigation {
+        margin-top: 15px;
+    }
+    
+    .carousel__dot {
+        width: 10px;
+        height: 10px;
     }
     
     /* ИСПРАВЛЕНИЕ: Гамбургер-меню по центру */
@@ -373,7 +473,7 @@ body {
         font-size: 14px;
     }
     
-    .equipment__item {
+    .equipment__carousel {
         width: 250px;
         height: 150px;
     }

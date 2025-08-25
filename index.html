@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда спецтехники</title>
+    <title>Продажа спецтехники</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="hero.css">
@@ -18,14 +18,14 @@
                 <div class="logo__text">
                     <h1 class="d-none d-md-block">СПЕЦТЕХ</h1>
                     <h1 class="d-md-none">СПЕЦТЕХ</h1>
-                    <span class="d-none d-sm-block">Аренда спецтехники</span>
+                    <span class="d-none d-sm-block">Продажа спецтехники</span>
                 </div>
             </div>
             <nav class="header__nav d-none d-lg-block">
                 <ul class="nav__list">
                     <li><a href="#about">О нас</a></li>
                     <li><a href="#equipment">Техника</a></li>
-                    <li><a href="#rent">Арендовать</a></li>
+                    <li><a href="#rent">Купить</a></li>
                 </ul>
             </nav>
             <div class="header__contact">
@@ -42,7 +42,7 @@
                 <ul class="nav__list nav__list--mobile">
                     <li><a href="#about">О нас</a></li>
                     <li><a href="#equipment">Техника</a></li>
-                    <li><a href="#rent">Арендовать</a></li>
+                    <li><a href="#rent">Купить</a></li>
                 </ul>
             </div>
         </div>
@@ -51,16 +51,31 @@
     <section class="hero">
         <div class="hero__container">
             <div class="hero__content">
-                <h2 class="hero__title">Аренда спецтехники</h2>
+                <h2 class="hero__title">Продажа спецтехники</h2>
                 <p class="hero__subtitle">Доставка эвакуатором на ваш объект в самые быстрые сроки!</p>
                 <button class="btn btn--cta" onclick="scrollToForm()">Оставить заявку</button>
             </div>
             <div class="hero__equipment">
-                <div class="equipment__item equipment__item--excavator">
+                <!-- Десктоп версия - обычное отображение -->
+                <div class="equipment__item equipment__item--excavator equipment__desktop">
                     <img src="https://lh3.googleusercontent.com/jhvcjcOIBm5PervzjbgEemHXR_o8y9ALJg7Mcem6aCc-8Je82su4MXaY1ycqbDZa5-y59MPFFClvnAvDCdP2B3kDQzFqCDAxGdmo08fJnPna0C88zg-8zvf93kZYP-OPezMfWi4O" alt="Экскаватор">
                 </div>
-                <div class="equipment__item equipment__item--loader">
+                <div class="equipment__item equipment__item--loader equipment__desktop">
                     <img src="https://i.pinimg.com/474x/a4/df/23/a4df238f0902bac509f7874187881a82.jpg" alt="Погрузчик">
+                </div>
+                
+                <!-- Мобильная версия - карусель -->
+                <div class="equipment__carousel equipment__mobile">
+                    <div class="equipment__item equipment__item--excavator active" data-slide="0">
+                        <img src="https://lh3.googleusercontent.com/jhvcjcOIBm5PervzjbgEemHXR_o8y9ALJg7Mcem6aCc-8Je82su4MXaY1ycqbDZa5-y59MPFFClvnAvDCdP2B3kDQzFqCDAxGdmo08fJnPna0C88zg-8zvf93kZYP-OPezMfWi4O" alt="Экскаватор">
+                    </div>
+                    <div class="equipment__item equipment__item--loader" data-slide="1">
+                        <img src="https://i.pinimg.com/474x/a4/df/23/a4df238f0902bac509f7874187881a82.jpg" alt="Погрузчик">
+                    </div>
+                </div>
+                <div class="carousel__navigation equipment__mobile">
+                    <button class="carousel__dot active" data-slide="0" aria-label="Показать экскаватор"></button>
+                    <button class="carousel__dot" data-slide="1" aria-label="Показать погрузчик"></button>
                 </div>
             </div>
         </div>
@@ -90,7 +105,7 @@
                                  </div>
                                  
                                 <div class="item__buttons">
-                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Купить</button>
                                     <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
                                 </div>
                             </div>
@@ -118,7 +133,7 @@
                                  </div>
                                  
                                 <div class="item__buttons">
-                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Купить</button>
                                     <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
                                 </div>
                             </div>
@@ -146,7 +161,7 @@
                                  </div>
                                  
                                 <div class="item__buttons">
-                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Купить</button>
                                     <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
                                 </div>
                             </div>
@@ -174,7 +189,7 @@
                                  </div>
                                  
                                 <div class="item__buttons">
-                                    <button class="btn btn--rent" onclick="scrollToForm()">Арендовать</button>
+                                    <button class="btn btn--rent" onclick="scrollToForm()">Купить</button>
                                     <button class="btn btn--question" onclick="scrollToForm()">Задать вопрос</button>
                                 </div>
                             </div>
@@ -194,7 +209,7 @@
                     <div class="about__content">
                         <h2 class="about__title">Мы работаем на территории <span class="highlight">Казахстана</span></h2>
                         <div class="about__text">
-                            <p>Мы предлагаем комплексные услуги по аренде спецтехники, охватывающие все районы Казахстана. Мы ценим время наших клиентов и гарантируем высокую скорость и удобство на каждом этапе сотрудничества. Наша команда профессионалов готова оперативно решать задачи, связанные с подбором техники, подписанием договора и организацией доставки.</p>
+                            <p>Мы предлагаем комплексные услуги по продаже спецтехники, охватывающие все районы Казахстана. Мы ценим время наших клиентов и гарантируем высокую скорость и удобство на каждом этапе сотрудничества. Наша команда профессионалов готова оперативно решать задачи, связанные с подбором техники, подписанием договора и организацией доставки.</p>
                         </div>
                     </div>
                 </div>
@@ -202,7 +217,7 @@
                     <div class="about__steps">
                         <div class="step">
                             <div class="step__number">1</div>
-                            <h3>Вы оставляете заявку на аренду техники</h3>
+                            <h3>Вы оставляете заявку на покупку техники</h3>
                             <p>Заполните простую анкету на сайте или свяжитесь по номеру указанному в контактах.</p>
                             <button class="btn btn--step" onclick="scrollToForm()">Оставить заявку</button>
                         </div>
@@ -237,7 +252,7 @@
                 <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
                     <div class="about__content">
                         <div class="about__text">
-                            <p>Процесс сотрудничества разработан максимально просто и понятно для клиента. Мы оперативно реагируем на запросы, предлагаем гибкие условия аренды и обеспечиваем своевременное выполнение проектов с минимальными усилиями с вашей стороны.</p>
+                            <p>Процесс сотрудничества разработан максимально просто и понятно для клиента. Мы оперативно реагируем на запросы, предлагаем гибкие условия покупки и обеспечиваем своевременное выполнение проектов с минимальными усилиями с вашей стороны.</p>
                         </div>
                     </div>
                 </div>
@@ -261,7 +276,7 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <div class="stat">
                         <div class="stat__number">15</div>
-                        <div class="stat__label">Лет опыта в стройке и аренде техники</div>
+                        <div class="stat__label">Лет опыта в стройке и продаже техники</div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -282,7 +297,7 @@
 
     <section class="booking-form" id="rent">
         <div class="form__container container">
-            <h2 class="form__title">Оставить заявку на аренду</h2>
+            <h2 class="form__title">Оставить заявку на покупку</h2>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-12 mb-3">
                     <div class="form__field">
@@ -307,7 +322,7 @@
                     <div class="form__field">
                         <label>Номер телефона</label>
                         <div class="phone__input">
-                            <span class="flag">🇰🇿</span>
+                           
                             <input type="tel" class="form-control" value="+7 (777) 777-77-77">
                         </div>
                     </div>
@@ -327,7 +342,7 @@
                     <div class="logo__text">
                         <h1 class="d-none d-md-block">СПЕЦТЕХ</h1>
                         <h1 class="d-md-none">СПЕЦТЕХ</h1>
-                        <span class="d-none d-sm-block">Аренда спецтехники</span>
+                        <span class="d-none d-sm-block">Продажа спецтехники</span>
                     </div>
                 </div>
             </div>
@@ -364,3 +379,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
